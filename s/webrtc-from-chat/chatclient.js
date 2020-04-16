@@ -102,10 +102,12 @@ function connect() {
   // If this is an HTTPS connection, we have to use a secure WebSocket
   // connection too, so add another "s" to the scheme.
 
+  serverUrl = scheme + "://" + myHostname + ":6503";
   if (document.location.protocol === "https:") {
     scheme += "s";
+    serverUrl = scheme + "://node-" + myHostname;
   }
-  serverUrl = scheme + "://" + myHostname + ":6503";
+  // serverUrl = scheme + "://" + myHostname + ":6503";
 
   log(`Connecting to server: ${serverUrl}`);
   connection = new WebSocket(serverUrl, "json");
