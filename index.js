@@ -80,11 +80,11 @@ httpServer.on("error", (err) => {
   }
 });
 
-if (httpsOptions) {
-  let httpServer = https.createServer(httpsOptions, app);
-  httpServer.listen(443);
-  console.log("HTTPS listening on port 443");
-}
+// if (httpsOptions) {
+//   let httpServer = https.createServer(httpsOptions, app);
+//   httpServer.listen(443);
+//   console.log("HTTPS listening on port 443");
+// }
 
 function readJSONFile(pathname) {
   const options = {
