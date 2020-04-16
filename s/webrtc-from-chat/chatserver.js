@@ -166,13 +166,13 @@ try {
 
 var webServer = null;
 
-try {
-  if (httpsOptions.key && httpsOptions.cert) {
-    webServer = https.createServer(httpsOptions, handleWebRequest);
-  }
-} catch(err) {
-  webServer = null;
-}
+// try {
+//   if (httpsOptions.key && httpsOptions.cert) {
+//     webServer = https.createServer(httpsOptions, handleWebRequest);
+//   }
+// } catch(err) {
+//   webServer = null;
+// }
 
 if (!webServer) {
   try {
