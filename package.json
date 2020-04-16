@@ -23,6 +23,7 @@
   "license": "CC0-1.0",
   "dependencies": {
     "escape-html": "^1.0.3",
-    "express": "^4.16.4"
+    "express": "^4.16.4",
+    "websocket": "^1.0.31"
   }
 }
