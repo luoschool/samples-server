@@ -21,8 +21,8 @@ var appendToMakeUnique = 1;
 // server.
 
 var httpsOptions = {
-  key: fs.readFileSync("/etc/pki/tls/private/mdn-samples.mozilla.org.key"),
-  cert: fs.readFileSync("/etc/pki/tls/certs/mdn-samples.mozilla.org.crt")
+  key: fs.readFileSync("/etc/nginx/cert/media/cert.key"),
+  cert: fs.readFileSync("/etc/nginx/cert/media/cert.crt")
 };
 
 // Our HTTPS server does nothing but service WebSocket

@@ -58,8 +58,8 @@ app.use("/css", express.static(path.join(__dirname, "css")));
 let httpsOptions = {};
 
 try {
-  httpsOptions.key = fs.readFileSync("/etc/pki/tls/private/mdn-samples.mozilla.org.key");
-  httpsOptions.cert = fs.readFileSync("/etc/pki/tls/certs/mdn-samples.mozilla.org.crt");
+  httpsOptions.key = fs.readFileSync("/etc/nginx/cert/media/cert.key");
+  httpsOptions.cert = fs.readFileSync("/etc/nginx/cert/media/cert.crt");
 } catch(err) {
   console.error("Unable to load HTTPS cert and/or key; available on HTTP only: " + err);
   httpsOptions = null;
