@@ -6,7 +6,7 @@ const fs = require("fs");
 const path = require("path");
 const escapeHTML = require("escape-html");
 
-let httpPort = 80;
+let httpPort = 3727;
 
 const htmlTop = `<!doctype html>
 <html>
@@ -66,7 +66,9 @@ try {
 }
 
 let httpServer = http.createServer(app);
-httpServer.listen(httpPort);
+httpServer.listen(httpPort, () => {
+  console.log('豪王http startup success:' + httpPort)
+});
 httpServer.on("error", (err) => {
   if (err.code === "EADDRINUSE") {
     httpPort = 8888;
